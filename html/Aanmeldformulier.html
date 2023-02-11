@@ -12,14 +12,47 @@
     <meta charset="utf-8">
 
     <style>
+        /*Code applied to all standard HTML element tags*/
+        * {
+            text-decoration: none;
+        }
 
         body {
             background-color: greenyellow;
             padding: 0 1rem 1rem 1rem;
+            text-align: center;
+            font-family: cursive;
         }
 
-        #eMail {
-            width: 22rem;
+        h1 {
+
+        }
+
+        h2 {
+
+        }
+
+        span {
+            font-size: large;
+            color: red;
+        }
+
+        /*Code applied to all HTML elements with an ID*/
+
+        #nChild, #nParent {
+            min-width: 29rem;
+        }
+
+        #phoneNrChild, #phoneNrParent {
+            min-width: 18rem;
+        }
+
+        #eMailChild, #eMailParent {
+            min-width: 17rem;
+        }
+
+        ::placeholder {
+            text-align: center;
         }
 
         #payment-button {
@@ -28,7 +61,28 @@
             color: white;
             border-radius: 5px;
             cursor: pointer;
+            outline: 2px solid black;
         }
+
+
+
+
+
+        #iBAN {
+            min-width: 21rem;
+        }
+
+        #submitButton {
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: cursive;
+            font-size: inherit;
+        }
+
+        /*Code applied to all HTML elements with a class*/
 
 
     </style>
@@ -38,57 +92,67 @@
 <h1>Kerkactiviteit Aanmeldformulier</h1>
 <br>
 <h2>Vul in dit aanmeldformulier je gegevens in en klik op de knop 'Verzend gegevens' om je vergevens te verzenden.
-    Vervolgens klik je op de knop 'Betalen' om te betalen via Tikkie. Zodra je een bevestiging van betaling hebt
-    ontvangen van Tikkie, is je aanmelding voltooid. (LET OP! Dit aanmeldformulier is per kind. Als je meer kinderen
-    wilt aanmelden, moet je meerdere keren het formulier invullen betalen!)</h2>
+    <br>Ga vervolgens terug naar deze pagina en klik op de knop 'Betalen' om te betalen via Tikkie.
+    <br><span>Geen betaling is geen aanmelding!</span>
+    <br>Vul in de beschrijving van de Tikkie nogmaals de naam van het kind in dat je inschrijft.
+    <br>Zodra je een bevestiging van betaling hebt ontvangen van Tikkie, is je aanmelding voltooid.
+    <br
+    ><span>(LET OP! Dit aanmeldformulier is per kind. Als je meer kinderen
+    wilt aanmelden, moet je meerdere keren het formulier invullen betalen!)</span></h2>
 <br>
+<form action="https://formsubmit.co/bavli2002@hotmail.com" method="POST">
 <div class="row">
     <div class="col-25">
-        <label for="nChild">Naam kind:</label>
+        <label for="nChild">Naam Deelnemer:</label>
     </div>
     <div class="col-75">
-        <input type="text" id="nChild" name="eMail"
-               placeholder="Vul hier de naam in van het kind je wilt inschrijven" required>
+        <input type="text" id="nChild" name="Voor- en Achternaam deelnemer:"
+               placeholder="Vul hier de voor- en achternaam in van de persoon die je wilt inschrijven" required>
     </div>
 </div>
 <br>
-<h3>Gegevens Ouders</h3>
-<br>
-<form action="https://formsubmit.co/Bavli2002@hotmail.com" method="POST" target="_blank">
-    <br>
     <div class="row">
         <div class="col-25">
-            <label for="fName">Voornaam:</label>
+            <label for="nParent">Naam Ouder:</label>
         </div>
         <div class="col-75">
-            <input type="text" id="fName" name="fName" placeholder="Vul hier je Voornaam in" required>
+            <input type="text" id="nParent" name="Voor- en Achternaam ouder:" placeholder="Vul hier de voor- en achternaam in van één van de ouders van de deelnemer" required>
         </div>
     </div>
     <br>
     <div class="row">
         <div class="col-25">
-            <label for="lName">Achternaam:</label>
+            <label for="phoneNrChild">Telefoonnummer Deelnemer:</label>
         </div>
         <div class="col-75">
-            <input type="text" id="lName" name="lName" placeholder="Vul hier je Achternaam in" required>
+            <input type="text" id="phoneNrChild" name="Telefoonnummer Deelnemer:" placeholder="Vul hier het telefoonummer in van de deelnemer" required>
         </div>
     </div>
     <br>
     <div class="row">
         <div class="col-25">
-            <label for="phoneNR">Telefoonnummer:</label>
+            <label for="phoneNrParent">Telefoonnummer Ouder:</label>
         </div>
         <div class="col-75">
-            <input type="text" id="phoneNR" name="phoneNR" placeholder="Vul hier je Telefoonnummer in" required>
+            <input type="text" id="phoneNrParent" name="Telefoonnummer Ouder:" placeholder="Vul hier het telefoonummer in van de ouder" required>
         </div>
     </div>
     <br>
     <div class="row">
         <div class="col-25">
-            <label for="eMail">E-mail:</label>
+            <label for="eMailChild">E-mail Deelnemer:</label>
         </div>
         <div class="col-75">
-            <input type="text" id="eMail" name="eMail" placeholder="Vul hier je E-mail in" required>
+            <input type="email" id="eMailChild" name="Email Deelnemer" placeholder="Vul hier het E-mailadres in van de deelnemer" required>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-25">
+            <label for="eMailParent">E-mail Ouder:</label>
+        </div>
+        <div class="col-75">
+            <input type="email" id="eMailParent" name="Email Ouder" placeholder="Vul hier het E-mailadres in van de ouder" required>
         </div>
     </div>
     <br>
@@ -98,24 +162,17 @@
         </div>
         <div class="col-75">
             <input type="text" id="iBAN" name="iBAN"
-                   placeholder="Vul hier het bankrekeningsnummer in waarmee je betaalt" required>
+                   placeholder="Vul hier de bankrekeningnummer in waarmee je betaalt" required>
         </div>
     </div>
     <br>
     <br>
-    <br>
-    <div onclick="action" class="submitButton" target="_blank">
-        <input type="submit" value="Verzend gegevens">
-    </div>
-    <br>
-    <a href="https://tikkie.me/pay/20bgg3vpke4p579b0c34" id="payment-button">Betalen</a>
-
+        <button id="submitButton" type="submit">Verzend gegevens</button>
 </form>
-
-<script>
-    function action() {
-        alert("Je gegevens zijn verzonden, reken alleen nog af door op de knop 'Betalen' te klikken en dan is je aanmelding compleet.");
-    }
-</script>
+<br>
+<br>
+<a href="https://tikkie.me/pay/20bgg3vpke4p579b0c34" id="payment-button">Betalen</a>
+<br>
+<br>
 </body>
 </html>
