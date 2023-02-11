@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+
+    <title>Kerkactiviteit Aanmeldformulier</title>
+
+    <!--metatags for responsiveness-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <meta charset="utf-8">
+
+    <style>
+
+        body {
+            background-color: greenyellow;
+            padding: 0 1rem 1rem 1rem;
+        }
+
+        #eMail {
+            width: 22rem;
+        }
+
+        #payment-button {
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<h1>Kerkactiviteit Aanmeldformulier</h1>
+<br>
+<h2>Vul in dit aanmeldformulier je gegevens in en klik op de knop 'Verzend gegevens' om je vergevens te verzenden.
+    Vervolgens klik je op de knop 'Betalen' om te betalen via Tikkie. Zodra je een bevestiging van betaling hebt
+    ontvangen van Tikkie, is je aanmelding voltooid. (LET OP! Dit aanmeldformulier is per kind. Als je meer kinderen
+    wilt aanmelden, moet je meerdere keren het formulier invullen betalen!)</h2>
+<br>
+<div class="row">
+    <div class="col-25">
+        <label for="nChild">Naam kind:</label>
+    </div>
+    <div class="col-75">
+        <input type="text" id="nChild" name="eMail"
+               placeholder="Vul hier de naam in van het kind je wilt inschrijven" required>
+    </div>
+</div>
+<br>
+<h3>Gegevens Ouders</h3>
+<br>
+<form action="https://formsubmit.co/Bavli2002@hotmail.com" method="POST" target="_blank">
+    <br>
+    <div class="row">
+        <div class="col-25">
+            <label for="fName">Voornaam:</label>
+        </div>
+        <div class="col-75">
+            <input type="text" id="fName" name="fName" placeholder="Vul hier je Voornaam in" required>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-25">
+            <label for="lName">Achternaam:</label>
+        </div>
+        <div class="col-75">
+            <input type="text" id="lName" name="lName" placeholder="Vul hier je Achternaam in" required>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-25">
+            <label for="phoneNR">Telefoonnummer:</label>
+        </div>
+        <div class="col-75">
+            <input type="text" id="phoneNR" name="phoneNR" placeholder="Vul hier je Telefoonnummer in" required>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-25">
+            <label for="eMail">E-mail:</label>
+        </div>
+        <div class="col-75">
+            <input type="text" id="eMail" name="eMail" placeholder="Vul hier je E-mail in" required>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-25">
+            <label for="iBAN">IBAN:</label>
+        </div>
+        <div class="col-75">
+            <input type="text" id="iBAN" name="iBAN"
+                   placeholder="Vul hier het bankrekeningsnummer in waarmee je betaalt" required>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div onclick="action" class="submitButton" target="_blank">
+        <input type="submit" value="Verzend gegevens">
+    </div>
+    <br>
+    <a href="https://tikkie.me/pay/20bgg3vpke4p579b0c34" id="payment-button">Betalen</a>
+
+</form>
+
+<script>
+    function action() {
+        alert("Je gegevens zijn verzonden, reken alleen nog af door op de knop 'Betalen' te klikken en dan is je aanmelding compleet.");
+    }
+</script>
+</body>
+</html>
