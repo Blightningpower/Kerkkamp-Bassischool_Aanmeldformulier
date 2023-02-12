@@ -96,6 +96,10 @@
       font-size: inherit;
     }
 
+    #group {
+      min-width: 15rem;
+    }
+
     /*Code applied to all HTML elements with a class*/
 
 
@@ -105,13 +109,11 @@
 <form id="form" action="https://formsubmit.co/Ginaarmanyous032@gmail.com" method="POST" target="_self" >
   <div class="row">
     <div class="col-25">
-      <label for="group">Kies je groep:</label>
-      <select name="Groep" id="group" required>
-        <option value="Groep 5">Groep 5</option>
-        <option value="Groep 6">Groep 6</option>
-        <option value="Groep 7">Groep 7</option>
-        <option value="Groep 8">Groep 8</option>
-      </select>
+      <label for="group">Groep:</label>
+    </div>
+    <div class="col-75">
+      <input type="number" id="group" name="Groep"
+             placeholder="Vul hier de groep in van de deelnemer" required>
     </div>
   </div>
   <br>
