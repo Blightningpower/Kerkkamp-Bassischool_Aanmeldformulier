@@ -20,22 +20,27 @@
 
         body {
             background-color: greenyellow;
-            padding: 0 1rem 1rem 1rem;
             text-align: center;
             font-family: cursive;
+            float: unset;
+            margin: 0;
+            padding: 0;
         }
 
-        h1 {
-
-        }
+        h1 {background-color: blueviolet;line-height: 130%;margin: 0;position: fixed;min-width: -webkit-fill-available;}
 
         h2 {
             font-size: large;
+            text-align: left;
         }
 
         span {
             font-size: large;
             color: red;
+        }
+
+        ul {
+            padding-top:  1rem;
         }
 
         iframe {
@@ -67,20 +72,30 @@
 <body>
 <h1>Kerkactiviteit Aanmeldformulier</h1>
 <br>
-<h2>Vul in dit aanmeldformulier je gegevens in en klik op de knop 'Verzend gegevens' om je vergevens te verzenden.
-    <br>Ga vervolgens terug naar deze pagina en klik op de knop 'Betalen' om te betalen via Tikkie.
-    <br><span>GEEN betaling is GEEN aanmelding!</span>
-    <br>Vul in de beschrijving van de Tikkie nogmaals de naam de deelnemer die zich inschrijft.
-    <br>Zodra je een bevestiging van betaling hebt ontvangen van Tikkie, is je aanmelding voltooid.
-    <br> Houd er rekening mee dat er een beperkt aantal plekken zijn.
-    <br><span>(LET OP! Dit aanmeldformulier is per deelnemer. Als je meer deelnemers
-    wilt aanmelden, moet je meerdere keren het formulier invullen en betalen!)</span></h2>
+<ul>
+    <li><h2>Vul in dit aanmeldformulier je gegevens in en klik op de knop 'Verzend gegevens' om je vergevens te
+        verzenden.</h2></li>
+    <li><h2>Klik daarna op de knop 'Betalen' om te betalen via Tikkie.</h2></li>
+    <li><h2><span>GEEN betaling is GEEN aanmelding!</span></h2></li>
+    <li><h2>Vul in de beschrijving van de Tikkie nogmaals de naam de deelnemer die zich inschrijft.</h2></li>
+    <li><h2>Zodra je een bevestiging van betaling hebt ontvangen van Tikkie, is je aanmelding voltooid.</h2></li>
+    <li><h2>Houd er rekening mee dat er een beperkt aantal plekken zijn.</h2></li>
+    <li><h2><span>(LET OP! Dit aanmeldformulier is per deelnemer. Als je meer deelnemers wilt aanmelden,
+        moet je meerdere keren het formulier invullen en betalen!)</span></h2></li>
+</ul>
 <br>
-<iframe src="https://blightningpower.github.io/KerkActiviteit-Aanmeldformulier/html/aanmeldformulier.html" scrolling="no"></iframe>
+<iframe id="iFrame" src="https://blightningpower.github.io/KerkActiviteit-Aanmeldformulier/html/aanmeldformulier.html"
+        scrolling="no"></iframe>
 <br>
 <br>
 <a href="https://tikkie.me/pay/20bgg3vpke4p579b0c34" id="payment-button">Betalen</a>
 <br>
 <br>
+<script>
+    function closeIframe(){
+        alert("Je gegevens zijn verzonden, reken alleen nog af door op de 'Betalen' knop te klikken. VERGEET NIET OM WEER JE VOOR- EN ACHTERNAAM IN TE VULLEN BIJ DE TIKKIE!")
+        document.getElementById('iFrame').style.display='none'
+    }
+</script>
 </body>
 </html>
