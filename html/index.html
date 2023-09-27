@@ -72,7 +72,7 @@
 
         #payment-button {
             padding: 10px 20px;
-            background-color: green;
+            background-color: #080;
             color: white;
             border-radius: 5px;
             cursor: pointer;
@@ -83,10 +83,20 @@
             color: white;
         }
 
+        #payment-button:hover {
+            background-color: #008;
+            color: white;
+        }
+
+        #payment-button:hover {
+            background-color: #800;
+            color: white;
+        }
+
         .blueText {
             color: blue;
         }
-    
+
         .blackText {
             color: black;
         }
@@ -130,8 +140,10 @@
                     moet je meerdere keren het formulier invullen en betalen!)</span></h2>
         </li>
         <li>
-            <h2 class="blueText">Betaal je via de Belgische bank, maak het geld dan over naar rekeningnummer: <i><span class="blackText">NL48INGB0003388918</span></i> en stuur
-                vervolgens een bericht naar <i><span class="blackText">06 407 460 17</span></i> om te bevestigen dat je hebt betaald. (Dit formulier valt
+            <h2 class="blueText">Betaal je via de Belgische bank, maak het geld dan over naar rekeningnummer: <i><span
+                        class="blackText">NL48INGB0003388918</span></i> en stuur
+                vervolgens een bericht naar <i><span class="blackText">06 407 460 17</span></i> om te bevestigen dat je
+                hebt betaald. (Dit formulier valt
                 buiten de betaling en kan gewoon ingevuld en verzonden worden).</h2>
         </li>
         <li>
@@ -139,19 +151,35 @@
         </li>
     </ul>
     <br>
-    <iframe id="iFrame" src="https://i484476.hera.fhict.nl/Kerkkamp-Bassischool_Aanmeldformulier/html/aanmeldformulier.html"
+    <iframe id="iFrame"
+        src="https://i484476.hera.fhict.nl/Kerkkamp-Bassischool_Aanmeldformulier/html/aanmeldformulier.html"
         scrolling="no"></iframe>
     <br>
     <br>
     <a href="https://tikkie.me/pay/rpddq5ho4952lii1u2vm" id="payment-button">Betalen</a>
     <br>
     <br>
-    <!--<script>-->
-    <!--    function closeIframe(){-->
-    <!--        alert("Je gegevens zijn verzonden, reken alleen nog af door op de 'Betalen' knop te klikken. VERGEET NIET OM WEER JE VOOR- EN ACHTERNAAM  EN JE GROEP IN TE VULLEN BIJ DE TIKKIE!")-->
-    <!--        document.getElementById('iFrame').style.display='none'-->
-    <!--    }-->
-    <!--</script>-->
+    <script>
+        // Voeg een klikgebeurtenislistener toe aan de betalingsknop
+        document.getElementById("payment-button").addEventListener("click", function (e) {
+            // Voorkom standaardgedrag van de link (navigeren naar de URL)
+            e.preventDefault();
+
+            // Toon het eerste bericht aan de gebruiker
+            var confirmation = confirm("Heb je alle gele velden met je gegevens al ingevuld en op de 'Verzend gegevens' knop geklikt? \n"
+                + "VERGEET NIET DE reCAPTCHA aan te vinken! \n"
+                + "Klik op 'OK' voor 'JA'. Klik op 'Annuleren' voor 'NEE'."
+            );
+
+            // Als de gebruiker op OK klikt, navigeer naar de Tikkie-link
+            if (confirmation) {
+                window.location.href = this.href;
+            } else {
+                // Als de gebruiker op Annuleren klikt, toon een bericht
+                var secondConfirmation = alert("Vul nog even de rest van je gegevens in en klik dan op 'Verzend gegevens' en vink vervolgens  de reCAPTCHA aan");
+            }
+        });
+    </script>
 </body>
 
 </html>

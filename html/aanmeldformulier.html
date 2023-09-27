@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
 
   <title>Kerkactiviteit Aanmeldformulier</title>
@@ -34,7 +35,7 @@
 
     /*Code applied to all HTML elements with an ID*/
 
-    #nChild{
+    #nChild {
       min-width: 20rem;
       background-color: #ffff1a;
       border-radius: 3px;
@@ -81,11 +82,21 @@
 
     #submitButton {
       padding: 10px 20px;
-      background-color: black;
+      background-color: #ff0000;
       color: white;
       border-radius: 5px;
       cursor: pointer;
       font-size: inherit;
+    }
+
+    #submitButton:hover {
+      background-color: #0f0;
+      color:#000;
+    }
+
+    #submitButton:active {
+      background-color: #00f;
+      color:#fff;
     }
 
     #group {
@@ -95,88 +106,93 @@
     }
 
     /*Code applied to all HTML elements with a class*/
-
-
   </style>
 </head>
+
 <body>
-<form id="form" action="https://formsubmit.co/Ginaarmanyous032@gmail.com" method="POST" target="_self" >
-  <div class="row">
-    <div class="col-25">
-      <label for="group">Groep:</label>
+  <form id="form" action="https://formsubmit.co/Ginaarmanyous032@gmail.com" method="POST" target="_self">
+    <div class="row">
+      <div class="col-25">
+        <label for="group">Groep:</label>
+      </div>
+      <div class="col-75">
+        <input type="number" id="group" name="Groep" placeholder="Vul hier de groep in van de deelnemer" min="5" max="8"
+          required>
+      </div>
     </div>
-    <div class="col-75">
-      <input type="number" id="group" name="Groep"
-             placeholder="Vul hier de groep in van de deelnemer" min="5" max="8" required>
+    <br>
+    <div class="row">
+      <div class="col-25">
+        <label for="nChild">Naam Deelnemer:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="nChild" name="Voor- en Achternaam deelnemer"
+          placeholder="Vul hier de voor- en achternaam in van de deelnemer" required>
+      </div>
     </div>
-  </div>
-  <br>
-  <div class="row">
-    <div class="col-25">
-      <label for="nChild">Naam Deelnemer:</label>
+    <br>
+    <div class="row">
+      <div class="col-25">
+        <label for="nParent">Naam Ouder</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="nParent" name="Voor- en Achternaam ouder"
+          placeholder="Vul hier de voor- en achternaam in van één van de ouders" required>
+      </div>
     </div>
-    <div class="col-75">
-      <input type="text" id="nChild" name="Voor- en Achternaam deelnemer"
-             placeholder="Vul hier de voor- en achternaam in van de deelnemer" required>
+    <br>
+    <div class="row">
+      <div class="col-25">
+        <label for="phoneNrChild">Telefoonnummer Deelnemer:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="phoneNrChild" name="Telefoonnummer Deelnemer"
+          placeholder="Vul hier het telefoonummer in van de deelnemer">
+      </div>
     </div>
-  </div>
-  <br>
-  <div class="row">
-    <div class="col-25">
-      <label for="nParent">Naam Ouder</label>
+    <br>
+    <div class="row">
+      <div class="col-25">
+        <label for="phoneNrParent">Telefoonnummer Ouder:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="phoneNrParent" name="Telefoonnummer Ouder"
+          placeholder="Vul hier het telefoonummer in van de ouder" required>
+      </div>
     </div>
-    <div class="col-75">
-      <input type="text" id="nParent" name="Voor- en Achternaam ouder" placeholder="Vul hier de voor- en achternaam in van één van de ouders" required>
+    <br>
+    <div class="row">
+      <div class="col-25">
+        <label for="eMailChild">E-mail Deelnemer:</label>
+      </div>
+      <div class="col-75">
+        <input type="email" id="eMailChild" name="Email Deelnemer"
+          placeholder="Vul hier het E-mailadres in van de deelnemer">
+      </div>
     </div>
-  </div>
-  <br>
-  <div class="row">
-    <div class="col-25">
-      <label for="phoneNrChild">Telefoonnummer Deelnemer:</label>
+    <br>
+    <div class="row">
+      <div class="col-25">
+        <label for="eMailParent">E-mail Ouder:</label>
+      </div>
+      <div class="col-75">
+        <input type="email" id="eMailParent" name="Email Ouder" placeholder="Vul hier het E-mailadres in van de ouder"
+          required>
+      </div>
     </div>
-    <div class="col-75">
-      <input type="text" id="phoneNrChild" name="Telefoonnummer Deelnemer" placeholder="Vul hier het telefoonummer in van de deelnemer">
+    <br>
+    <div class="row">
+      <div class="col-25">
+        <label for="iBAN">IBAN:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="iBAN" name="iBAN" placeholder="Vul hier de bankrekeningnummer in waarmee je betaalt"
+          required>
+      </div>
     </div>
-  </div>
-  <br>
-  <div class="row">
-    <div class="col-25">
-      <label for="phoneNrParent">Telefoonnummer Ouder:</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="phoneNrParent" name="Telefoonnummer Ouder" placeholder="Vul hier het telefoonummer in van de ouder" required>
-    </div>
-  </div>
-  <br>
-  <div class="row">
-    <div class="col-25">
-      <label for="eMailChild">E-mail Deelnemer:</label>
-    </div>
-    <div class="col-75">
-      <input type="email" id="eMailChild" name="Email Deelnemer" placeholder="Vul hier het E-mailadres in van de deelnemer">
-    </div>
-  </div>
-  <br>
-  <div class="row">
-    <div class="col-25">
-      <label for="eMailParent">E-mail Ouder:</label>
-    </div>
-    <div class="col-75">
-      <input type="email" id="eMailParent" name="Email Ouder" placeholder="Vul hier het E-mailadres in van de ouder" required>
-    </div>
-  </div>
-  <br>
-  <div class="row">
-    <div class="col-25">
-      <label for="iBAN">IBAN:</label>
-    </div>
-    <div class="col-75">
-      <input type="text" id="iBAN" name="iBAN"
-             placeholder="Vul hier de bankrekeningnummer in waarmee je betaalt" required>
-    </div>
-  </div>
-  <br>
-  <button id="submitButton" type="submit">Verzend gegevens</button>
-</form>
+    <br>
+    <button id="submitButton" type="submit">Verzend gegevens</button>
+  </form>
 </body>
+
 </html>
