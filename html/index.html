@@ -166,8 +166,8 @@
             e.preventDefault();
 
             // Toon het eerste bericht aan de gebruiker
-            var confirmation = confirm("Heb je alle gele velden met je gegevens al ingevuld en op de 'Verzend gegevens' knop geklikt? \n"
-                + "VERGEET NIET DE reCAPTCHA aan te vinken! \n"
+            var confirmation = confirm("Heb je alle gele velden met je gegevens al ingevuld en op de \n 'Verzend gegevens' knop geklikt? \n\n"
+                + "VERGEET NIET DE 'Ik ben geen robot' reCAPTCHA aan te vinken! \n\n"
                 + "Klik op 'OK' voor 'JA'. Klik op 'Annuleren' voor 'NEE'."
             );
 
@@ -176,7 +176,7 @@
                 window.location.href = this.href;
             } else {
                 // Als de gebruiker op Annuleren klikt, toon een bericht
-                var secondConfirmation = alert("Vul nog even de rest van je gegevens in en klik dan op 'Verzend gegevens' en vink vervolgens de reCAPTCHA aan");
+                var secondConfirmation = alert("Vul nog even de rest van je gegevens in en klik dan op \n 'Verzend gegevens' en vink vervolgens de 'Ik ben geen robot' reCAPTCHA aan");
             }
         });
     </script>
